@@ -29,3 +29,9 @@ server_scripts {
   'server_transport.lua',
   'server_air_transport.lua'
 }
+
+escrow_ignore {
+    'nui/*',
+    'config.lua',
+    'aa.lua'
+}
