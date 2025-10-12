@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="pager-device" class="hidden">
+    <div class="bezel">
+      <div class="header">
+        <div class="brand">SAA PAGER</div>
+        <div class="led" id="led"></div>
+      </div>
+      <div class="lcd">
+        <div id="lcd-text"></div>
+      </div>
+      <div class="footer">
+        <div id="progress"><span id="bar"></span></div>
+      </div>
+    </div>
+  </div>
+  <div id="transport-hint" class="thidden">
+    <div class="tcard">
+      <div class="ttext" id="transport-hint-text"></div>
+      <div class="tbar"><span id="transport-hint-bar"></span></div>
+    </div>
+  </div>
+  <div id="cac" class="hidden">
+    <div class="cac-card">
+      <img src="cac.png" alt="CAC" class="cac-bg">
+      <div class="cac-overlay">
+        <div class="cac-name" id="cac-name"></div>
+        <div class="cac-rank" id="cac-rank"></div>
+      </div>
+    </div>
+  </div>
+  <div id="recruit" class="hidden">
+    <div class="panel">
+      <h2>Přihláška do armády</h2>
+      <form id="recruit-form"></form>
+      <div class="actions">
+        <button id="recruit-send" type="button">Odeslat</button>
+        <button id="recruit-cancel" type="button">Zavřít</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
