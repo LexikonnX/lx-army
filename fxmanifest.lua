@@ -1,5 +1,9 @@
 fx_version 'cerulean'
+
+author 'Lexikonn'
+
 game 'gta5'
+
 lua54 'yes'
 
 shared_scripts {
@@ -35,3 +39,4 @@ escrow_ignore {
     'config.lua',
     'aa.lua'
 }
+
