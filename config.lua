@@ -63,7 +63,7 @@ Config.Base = vector3(-2115.07, 3146.95, 32.81)
 
 Config.SpawnGarageHeli = true
 Config.SpawnGaragePlane = true
-Config.SpawnGarageBoat = false
+Config.SpawnGarageBoat = true
 Config.SpawnPoint = {
     vector4(-1877.35, 2805.34, 32.81, 327.4),
     vector4(3102.76, -4734.51, 15.26, 101.06),
@@ -85,11 +85,11 @@ Config.Helis = {
 Config.Planes = {
     {label = "Lazer", model = "lazer", max = 3},
     {label = "Titan", model = "titan", max = 1},
-    --{label = "Strike Force", model = "strikeforce", max = 1},
+    {label = "Strike Force", model = "strikeforce", max = 1},
     --{label = "Millitary Jet", model = "miljet", max = 1}
 }
 Config.Boats = {
-    --{ label = 'Boat', model = 'patrolboat', max = 1},
+    { label = 'Boat', model = 'patrolboat', max = 1},
     --{ label = 'Avisa', model = 'avisa', max = 1},
 }
 
@@ -228,4 +228,3 @@ Config.AirTransport = {
         color = 46
     }
 }
-
