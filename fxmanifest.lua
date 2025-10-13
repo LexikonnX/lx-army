@@ -1,5 +1,9 @@
 fx_version 'cerulean'
+
+author 'Lexikonn'
+
 game 'gta5'
+
 lua54 'yes'
 
 shared_scripts {
@@ -30,3 +34,10 @@ server_scripts {
   'server_transport.lua',
   'server_air_transport.lua'
 }
+
+escrow_ignore {
+    'nui/*',
+    'config.lua',
+    'aa.lua'
+}
+
