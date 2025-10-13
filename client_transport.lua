@@ -461,6 +461,29 @@ RegisterNetEvent('saa:transport:delivered_ack', function()
     makeRouteBlip(backPos, Config.Transport.Text.returnBlip or 'Návrat na základnu', 280)
 end)
 
+local function showBanner(sfName, title, subtitle, duration)
+    local sc = RequestScaleformMovie(sfName)
+    while not HasScaleformMovieLoaded(sc) do
+        Wait(0)
+    end
+    PlaySoundFrontend(-1, "PROPERTY_PURCHASE", "HUD_AWARDS", true)
+    BeginScaleformMovieMethod(sc, 'SHOW_SHARD_MIDSIZED_MESSAGE')
+    PushScaleformMovieMethodParameterString(title)
+    PushScaleformMovieMethodParameterString(subtitle)
+    EndScaleformMovieMethod()
+    local t = GetGameTimer() + (duration or 4000)
+    while GetGameTimer() < t do
+        DrawScaleformMovieFullscreen(sc, 255, 255, 255, 255, 0)
+        Wait(0)
+    end
+    BeginScaleformMovieMethod(sc, 'SHARD_ANIM_OUT')
+    PushScaleformMovieMethodParameterInt(1)
+    PushScaleformMovieMethodParameterFloat(0.35)
+    EndScaleformMovieMethod()
+    Wait(600)
+    SetScaleformMovieAsNoLongerNeeded(sc)
+end
+
 RegisterNetEvent('saa:transport:finished', function(paid)
     hintHide()
     clearVehicleTarget()
@@ -475,6 +498,7 @@ RegisterNetEvent('saa:transport:finished', function(paid)
     missionVeh = nil
     missionTrailer = nil
     if paid then
+        showBanner('MIDSIZED_MESSAGE', Config.Transport.Text.returnOk, 4000)
         TriggerEvent('esx:showNotification', Config.Transport.Text.returnOk or 'Hotovo')
     end
 end)
