@@ -20,6 +20,17 @@ Config.Recruit = {
   }
 }
 
+Config.NightVision = {
+    { drawable = 116, texture = 0 },
+    { drawable = 118, texture = 0 },
+    { drawable = 147, texture = 0 },
+    { drawable = 276, texture = 0 },
+    { drawable = 279, texture = 0 },
+    { drawable = 284, texture = 0 },
+}
+Config.CheckInterval = 500
+Config.KeyDefault = 'N'
+
 Config.PagerCooldown = 60
 Config.MessageMax = 100
 Config.PagerDuration = 20 * 1000

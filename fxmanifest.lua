@@ -21,6 +21,7 @@ client_scripts {
   'client.lua',
   'client_transport.lua',
   'client_air_transport.lua',
+  'nightvision.lua',
   'aa.lua'
 }
 
