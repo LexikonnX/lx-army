@@ -22,6 +22,8 @@ Config.Recruit = {
 
 Config.NightVision = {
     { drawable = 116, texture = 0 },
+    { drawable = 4, texture = 0 }, --dev
+    { drawable = 220, texture = 0 }, --dev
     { drawable = 118, texture = 0 },
     { drawable = 147, texture = 0 },
     { drawable = 276, texture = 0 },
