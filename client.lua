@@ -601,13 +601,21 @@ end)
 
 RegisterNetEvent('lx-army:duty:state', function(state)
     isOnDuty = state and true or false
-    if not isOnDuty then
-        clearBlips()
-    else
-        local c = GetEntityCoords(PlayerPedId())
-        TriggerServerEvent('lx-army:duty:pos', c.x, c.y, c.z)
+end)
+
+CreateThread(function()
+    while true do
+        local pd = ESX.GetPlayerData()
+        if pd and pd.job and pd.job.name == Config.Job then
+            local c = GetEntityCoords(PlayerPedId())
+            TriggerServerEvent('lx-army:duty:pos', c.x, c.y, c.z)
+            Wait(2000)
+        else
+            Wait(1500)
+        end
     end
 end)
+
 
 RegisterNetEvent('lx-army:duty:positions', function(pack)
     local seen = {}
