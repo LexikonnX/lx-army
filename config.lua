@@ -79,13 +79,13 @@ Config.SpawnGarageBoat = {
     spawn = vector4(-3188.38, 4005.16, 1.15, 349.65)
 }
 Config.Helis = {
-    {label = "Valkyrie", model = "valkyrie", max = 2},
+    --{label = "Valkyrie", model = "valkyrie", max = 2},
     {label = "Cargobob", model = "cargobob", max = 2},
 }
 Config.Planes = {
     {label = "Lazer", model = "lazer", max = 3},
     {label = "Titan", model = "titan", max = 1},
-    {label = "Strike Force", model = "strikeforce", max = 1},
+    --{label = "Strike Force", model = "strikeforce", max = 1},
     --{label = "Millitary Jet", model = "miljet", max = 1}
 }
 Config.Boats = {
