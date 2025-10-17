@@ -64,7 +64,7 @@ Config.Base = vector3(-2115.07, 3146.95, 32.81)
 
 Config.SpawnGarageHeli = true
 Config.SpawnGaragePlane = true
-Config.SpawnGarageBoat = true
+Config.SpawnGarageBoat = false
 Config.SpawnPoint = {
     vector4(-1877.35, 2805.34, 32.81, 327.4),
     vector4(3102.76, -4734.51, 15.26, 101.06),
@@ -229,3 +229,4 @@ Config.AirTransport = {
         color = 46
     }
 }
+
