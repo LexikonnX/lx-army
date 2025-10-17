@@ -45,12 +45,3 @@ CreateThread(function()
         Wait(Config.CheckInterval)
     end
 end)
-
-RegisterCommand('nvgdbg', function()
-    local ped = PlayerPedId()
-    local hatDrawable = GetPedPropIndex(ped, 0)
-    local hatTexture = GetPedPropTextureIndex(ped, 0)
-    local maskDrawable = GetPedDrawableVariation(ped, 1)
-    local maskTexture = GetPedTextureVariation(ped, 1)
-    print(('[NVG DBG] HAT drawable=%s texture=%s | MASK drawable=%s texture=%s'):format(hatDrawable, hatTexture, maskDrawable, maskTexture))
-end, false)
